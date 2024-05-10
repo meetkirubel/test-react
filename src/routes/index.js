@@ -2,7 +2,7 @@ const express = require("express");
 const db = require("../models/db");
 
 const route = express.Router();
-route.get("/", (req, res) => {
+route.get("/api/content", (req, res) => {
   db.promise()
     .query(`select * from content`)
     .then((data) => {
